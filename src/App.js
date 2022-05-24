@@ -7,6 +7,7 @@ import {useState, useEffect} from 'react';
 
 
 
+
 export function App() {
   const [countrys, setCountrys] = useState([]);
 
@@ -27,10 +28,10 @@ export function App() {
       <p>Cargando....</p>
     )
   }
-  const OPcodes = countrys[Ncountry].borders.slice(0,3);
-  OPcodes.push(countrys[Ncountry].cca3)
+  const codes = countrys[Ncountry].borders.slice(0,3);
+  codes.push(countrys[Ncountry].cca3)
+  const OPcodes = codes.sort();
   
-
   return (
     <div> 
       <h1>De que pais es esta bandera?</h1>
@@ -41,7 +42,10 @@ export function App() {
       
       {OPcodes.map(op =>( 
         <Options 
-      code={op} key={op}/>
+      key={op}
+      code={op} 
+      resC={countrys[Ncountry].name.official}
+      />
 
       ))}
 
