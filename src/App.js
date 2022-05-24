@@ -34,16 +34,17 @@ export function App() {
     <div> 
       <h1>De que pais es esta bandera?</h1>
       <img src={countrys[Ncountry].flags.png} alt='pais' />
-      <p>Opciones:</p>
+      <p><strong>Opciones:</strong></p>
       <p>{countrys[Ncountry].name.official}</p>
+      
+      {OPcodes.map(op =>( 
+        <Options 
+      code={op} key={op}/>
 
-      {countrys[Ncountry].borders.slice(0,3).map(op =>(
-        <p key={op}>{op}</p>
       ))}
 
-      <Options 
-      code='AUT'
-      /> 
+
+
 
     </div>
     
