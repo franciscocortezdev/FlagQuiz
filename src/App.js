@@ -1,11 +1,13 @@
 import './App.css';
 import { getAllCountrys } from './API/getAllCountrys'
+import { Options } from './components/Options'
 import { getCodeCountrys } from './API/getCodeCountrys'
+
 import {useState, useEffect} from 'react';
 
 
 
-function App() {
+export function App() {
   const [countrys, setCountrys] = useState([]);
 
   useEffect(()=>{
@@ -15,20 +17,19 @@ function App() {
     } );
   },[]);
 
-  useEffect(()=>{
-    getCodeCountrys('BEN').then(data =>{
-      console.log(data);
-    } );
-  },[]);
+  
   
   let Ncountry = Math.floor(Math.random()*110)
-  
+
+  const OPcodes = ['BRA','COL','GUY','BEN']
+
+
+
   if(countrys.length<1){
     return (
       <p>Cargando....</p>
     )
   }
-
   return (
     <div> 
       <h1>De que pais es esta bandera?</h1>
@@ -40,8 +41,10 @@ function App() {
         <p key={op}>{op}</p>
       ))}
 
-      
-    
+      <Options 
+      code='AUT'
+      /> 
+
     </div>
     
     
@@ -49,5 +52,3 @@ function App() {
 
   );
 }
-
-export default App;
