@@ -21,21 +21,23 @@ export function App() {
   
   let Ncountry = Math.floor(Math.random()*110)
 
-  const OPcodes = ['BRA','COL','GUY','BEN']
-
-
 
   if(countrys.length<1){
     return (
       <p>Cargando....</p>
     )
   }
+  const OPcodes = countrys[Ncountry].borders.slice(0,3);
+  OPcodes.push(countrys[Ncountry].cca3)
+  
+
   return (
     <div> 
       <h1>De que pais es esta bandera?</h1>
       <img src={countrys[Ncountry].flags.png} alt='pais' />
       <p><strong>Opciones:</strong></p>
-      <p>{countrys[Ncountry].name.official}</p>
+      
+  
       
       {OPcodes.map(op =>( 
         <Options 

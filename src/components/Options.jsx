@@ -14,7 +14,7 @@ export function Options({code}){
   useEffect(()=>{
     getCodeCountrys(code).then(data =>{
 
-      console.log(data[0].name.official);
+      
       setcodeP(data[0].name.official)
     } );
   },[]);
