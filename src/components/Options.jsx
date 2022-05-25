@@ -6,9 +6,7 @@ import './Options.css'
 function handleClick(resc, ev ){
   let selected = ev.target.innerText;
   let correct = document.getElementById(resc)
-  
-  console.log(resc)
-  
+
 
   if(selected == resc){
     console.log('correcto')
@@ -32,16 +30,22 @@ export function Options({code, resC}){
     } );
   },[]);
   
+  
+    if(codeP === undefined){ 
+      return (
+        <p>Cargando opcion ....</p>
+      )
+    }
 
-
-  return (
-
-
-    <div id={codeP}>
-      <p onClick={(e)=> handleClick(resC, e)} >{codeP}</p>
-    </div>
-  )
-
+    return (
+      <div id={codeP}>
+        <p onClick={(e)=> handleClick(resC, e)} >{codeP}</p>
+      </div>
+    )
+  // }
+  // return(
+  //   <p>Cargando Opciones....</p>
+  // )
 
 }
 
