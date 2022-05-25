@@ -1,6 +1,6 @@
 import { getAllCountrys } from '../API/getAllCountrys'
 import {useState, useEffect} from 'react';
-import {Options} from './Options'
+import {Options} from './Options/Options'
 
 
 
@@ -13,7 +13,7 @@ export function Picture({rd}){
     setLoad(true)
     
     getAllCountrys().then(data =>{
-      const result = data.filter(country => country.hasOwnProperty('borders') && country.borders.length >= 3);
+      const result = data.filter(country => country.hasOwnProperty('borders') && country.borders.length >= 2);
       setCountrys(result[rd]);
       setLoad(false)
       
@@ -29,7 +29,7 @@ export function Picture({rd}){
     )
   }
 
-  const codes = countrys.borders.slice(0,3);
+  const codes = countrys.borders.slice(0,2);
   codes.push(countrys.cca3)
   const OPcodes = codes.sort();
 
@@ -41,7 +41,7 @@ export function Picture({rd}){
      <p><strong>Opciones:</strong></p>
      
   
-     <p>Numero Aleatorio: {rd}</p>
+     
 
 
      

@@ -1,4 +1,4 @@
-import { getCodeCountrys } from '../API/getCodeCountrys'
+import { getCodeCountrys } from '../../API/getCodeCountrys'
 import {useState, useEffect} from 'react';
 import './Options.css'
 
