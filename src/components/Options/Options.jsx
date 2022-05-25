@@ -33,13 +33,13 @@ export function Options({code, resC}){
   
     if(codeP === undefined){ 
       return (
-        <p>Cargando opcion ....</p>
+        <p className='Loading'>Cargando opcion ....</p>
       )
     }
 
     return (
-      <div id={codeP}>
-        <p onClick={(e)=> handleClick(resC, e)} >{codeP}</p>
+      <div id={codeP} className='option' onClick={(e)=> handleClick(resC, e)}>
+        <p className='option_P'  >{codeP}</p>
       </div>
     )
 

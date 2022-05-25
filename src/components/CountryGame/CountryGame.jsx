@@ -1,7 +1,7 @@
 import { getAllCountrys } from '../../API/getAllCountrys'
 import {useState, useEffect} from 'react';
 import {Options} from '../Options/Options'
-
+import './CountryGame.css'
 
 
 
@@ -20,12 +20,10 @@ export function CountryGame({rd}){
     } );
   },[rd]);
 
-  //console.log(`Fuera del Efect load = ${load} countrys ${countrys}`)
-
 
   if(load){
     return (
-      <p>Cargando Picture....</p>
+      <p className='Loading'>Cargando Picture....</p>
     )
   }
 
@@ -34,17 +32,12 @@ export function CountryGame({rd}){
   const OPcodes = codes.sort();
 
   return(
-    <div>
-     <img src={countrys.flags.png} alt={countrys.name.official} />
-
-
-     <p><strong>Opciones:</strong></p>
-     
-  
-     
-
-
-     
+    <>
+    <div className='containerHead'>
+    <h1 className='gameTitle'>What country is?</h1>
+     <img className='countryImg' src={countrys.flags.png} alt={countrys.name.official} />
+     </div>
+    <div className='containerOptions'>
      {OPcodes.map(op =>( 
        <Options 
      key={op}
@@ -53,9 +46,9 @@ export function CountryGame({rd}){
      />
 
      ))}
-
-
     </div>
+    </>
+    
   )
 
 }
