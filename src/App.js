@@ -1,5 +1,5 @@
 import './App.css';
-import { Picture } from './components/Picture'
+import { CountryGame } from './components/CountryGame/CountryGame'
 import {useState} from 'react';
 
 
@@ -13,7 +13,7 @@ export function App() {
     <div> 
       <h1>De que pais es esta bandera?</h1>
      
-       <Picture rd={rand}/>
+       <CountryGame rd={rand}/>
 
       <button onClick={()=>{setRand(Math.floor(Math.random()*110))}} >Siguiente Pais</button>
 

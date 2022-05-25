@@ -1,11 +1,11 @@
-import { getAllCountrys } from '../API/getAllCountrys'
+import { getAllCountrys } from '../../API/getAllCountrys'
 import {useState, useEffect} from 'react';
-import {Options} from './Options/Options'
+import {Options} from '../Options/Options'
 
 
 
 
-export function Picture({rd}){
+export function CountryGame({rd}){
   const [countrys, setCountrys] = useState([]);
   const [load, setLoad] = useState(true);
 
