@@ -8,7 +8,7 @@ function handleClick(resc, ev ){
   let correct = document.getElementById(resc)
 
 
-  if(selected == resc){
+  if(selected === resc){
     console.log('correcto')
     correct.classList.add('correct')
     return
@@ -28,7 +28,7 @@ export function Options({code, resC}){
     getCodeCountrys(code).then(data =>{
       setcodeP(data[0].name.official)
     } );
-  },[]);
+  },[code]);
   
   
     if(codeP === undefined){ 
@@ -42,10 +42,6 @@ export function Options({code, resC}){
         <p onClick={(e)=> handleClick(resC, e)} >{codeP}</p>
       </div>
     )
-  // }
-  // return(
-  //   <p>Cargando Opciones....</p>
-  // )
 
 }
 
