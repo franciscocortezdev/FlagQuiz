@@ -1,7 +1,6 @@
 import { getCodeCountrys } from '../../API/getCodeCountrys'
-import {useState, useEffect, useRef} from 'react';
+import {useState, useEffect} from 'react';
 import './Options.css'
-import { scryRenderedComponentsWithType } from 'react-dom/test-utils';
 
 
 

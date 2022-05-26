@@ -93,11 +93,9 @@ export function CountryGame(){
 
     {
       selected && 
-      ( numQuestion === 10 ? <a href='/gameEnd' >Resultado</a> : <button className='btnNext' onClick={handleBtnNext} >Next Country</button>)
+      ( numQuestion === 10 ? <a href={` /gameend/${numCorrect.current}`} ><button className='btnNext'>Result</button></a> : <button className='btnNext' onClick={handleBtnNext} >Next Country</button>)
     }
     
-    
-
     </div>
 
     </>
