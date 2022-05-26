@@ -1,35 +1,48 @@
 import { getCodeCountrys } from '../../API/getCodeCountrys'
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useRef} from 'react';
 import './Options.css'
+import { scryRenderedComponentsWithType } from 'react-dom/test-utils';
 
 
-function handleClick(resc, ev ){
-  let selected = ev.target.innerText;
-  let correct = document.getElementById(resc)
 
-
-  if(selected === resc){
-    console.log('correcto')
-    correct.classList.add('correct')
-    return
-  }
-  console.log('incorrecto');
-  ev.target.classList.add('incorrect')
-  correct.classList.add('correct')
-}
 
 
 export function Options({code, resC}){
 
  const [codeP, setcodeP] = useState();
 
+ const numberCorrect = useRef(0);
+  const numberAswer = useRef(0)
 
   useEffect(()=>{
     getCodeCountrys(code).then(data =>{
       setcodeP(data[0].name.official)
     } );
   },[code]);
+
+
+  const handleClick = (resc,e) => {
+    let selected = e.target
+    let correct = document.getElementById(resc)
+
+   
+
+    if(selected.innerText === resc){
+      console.log('correcto')
+      selected.classList.add('correct')
+
+    
+      return
+    }
+    
   
+    console.log('incorrecto');
+    selected.classList.add('incorrect')
+    correct.classList.add('correct')
+  }
+
+  
+    
   
     if(codeP === undefined){ 
       return (
@@ -37,9 +50,14 @@ export function Options({code, resC}){
       )
     }
 
+    console.log('Correct ' + numberCorrect)
+     console.log('Respuestas ' + numberCorrect)
+
+
     return (
-      <div id={codeP} className='option' onClick={(e)=> handleClick(resC, e)}>
-        <p className='option_P'  >{codeP}</p>
+      <div id={codeP} className='option' onClick={(e)=> handleClick(resC,e)}>
+         <p className='option_P'  >{codeP}</p>
+
       </div>
     )
 

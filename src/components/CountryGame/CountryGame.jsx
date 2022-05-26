@@ -5,7 +5,8 @@ import './CountryGame.css'
 
 
 
-export function CountryGame({rd}){
+export function CountryGame(){
+  const [rand, setRand] = useState(Math.floor(Math.random()*110));
   const [countrys, setCountrys] = useState([]);
   const [load, setLoad] = useState(true);
 
@@ -14,16 +15,19 @@ export function CountryGame({rd}){
     
     getAllCountrys().then(data =>{
       const result = data.filter(country => country.hasOwnProperty('borders') && country.borders.length >= 2);
-      setCountrys(result[rd]);
+      setCountrys(result[rand]);
       setLoad(false)
       
     } );
-  },[rd]);
+  },[rand]);
 
 
   if(load){
     return (
-      <p className='Loading'>Cargando Picture....</p>
+      <div className='containerHead'>
+        <h1 className='gameTitle'>What country is?</h1>
+        <p className='Loading'>Cargando Picture....</p>
+      </div>
     )
   }
 
@@ -35,9 +39,13 @@ export function CountryGame({rd}){
     <>
     <div className='containerHead'>
     <h1 className='gameTitle'>What country is?</h1>
+
+    
+      
      <img className='countryImg' src={countrys.flags.png} alt={countrys.name.official} />
      </div>
     <div className='containerOptions'>
+
      {OPcodes.map(op =>( 
        <Options 
      key={op}
@@ -46,7 +54,11 @@ export function CountryGame({rd}){
      />
 
      ))}
+
+
     </div>
+    <button className='btnNext' onClick={()=>{setRand(Math.floor(Math.random()*110))}} >Next Country</button>
+
     </>
     
   )
