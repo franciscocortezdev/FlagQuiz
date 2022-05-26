@@ -21,20 +21,3 @@
   box-shadow: 0 0 10px #000;
 }
 
-.btnNext{
-  padding: 10px 20px;
-  font-family: 'Kanit', sans-serif;
-  font-size: 20px;
-  border: 2px solid rgb(41, 18, 82);
-  border-radius: 10px;
-  background-color: rgb(41, 18, 82);
-  color: #fff;
-}
-.btnNext:hover{
-  transform: scale(1.1);
-  
-}
-.btnNext:active{
-  transform: scale(1);
-  
-}

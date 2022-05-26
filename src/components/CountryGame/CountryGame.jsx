@@ -1,5 +1,5 @@
 import { getAllCountrys } from '../../API/getAllCountrys'
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useRef} from 'react';
 import {Options} from '../Options/Options'
 import './CountryGame.css'
 
@@ -9,6 +9,8 @@ export function CountryGame(){
   const [rand, setRand] = useState(Math.floor(Math.random()*110));
   const [countrys, setCountrys] = useState([]);
   const [load, setLoad] = useState(true);
+  const [numQuestion, setnumQuestion] = useState(1)
+  const numCorrect = useRef(0)
 
   useEffect(()=>{
     setLoad(true)
@@ -35,6 +37,25 @@ export function CountryGame(){
   codes.push(countrys.cca3)
   const OPcodes = codes.sort();
 
+  const handleBtnNext = () =>{
+    setRand(Math.floor(Math.random()*110))
+    setnumQuestion(prev => prev + 1)
+    
+  }
+  const handleClick = (resc,e) => {
+    let selected = e.target
+    let correct = document.getElementById(resc)
+   
+    if(selected.innerText === resc){
+      selected.classList.add('correct')
+      numCorrect.current += 1
+      return
+    }
+  
+    selected.classList.add('incorrect')
+    correct.classList.add('correct')
+  }
+  console.log(numCorrect)
   return(
     <>
     <div className='containerHead'>
@@ -51,13 +72,19 @@ export function CountryGame(){
      key={op}
      code={op} 
      resC={countrys.name.official}
+     clickOptions={handleClick}
      />
 
      ))}
 
 
     </div>
-    <button className='btnNext' onClick={()=>{setRand(Math.floor(Math.random()*110))}} >Next Country</button>
+    <div className='containerBtn'>
+    <p>Question: {numQuestion}/10</p>
+    {numQuestion === 10 ? <a href='/gameEnd' >Resultado</a> : <button className='btnNext' onClick={handleBtnNext} >Next Country</button>}
+    
+
+    </div>
 
     </>
     

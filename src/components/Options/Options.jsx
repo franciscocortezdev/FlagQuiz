@@ -7,12 +7,9 @@ import { scryRenderedComponentsWithType } from 'react-dom/test-utils';
 
 
 
-export function Options({code, resC}){
+export function Options({code, resC,clickOptions}){
 
  const [codeP, setcodeP] = useState();
-
- const numberCorrect = useRef(0);
-  const numberAswer = useRef(0)
 
   useEffect(()=>{
     getCodeCountrys(code).then(data =>{
@@ -21,28 +18,9 @@ export function Options({code, resC}){
   },[code]);
 
 
-  const handleClick = (resc,e) => {
-    let selected = e.target
-    let correct = document.getElementById(resc)
-
-   
-
-    if(selected.innerText === resc){
-      console.log('correcto')
-      selected.classList.add('correct')
-
-    
-      return
-    }
-    
   
-    console.log('incorrecto');
-    selected.classList.add('incorrect')
-    correct.classList.add('correct')
-  }
 
   
-    
   
     if(codeP === undefined){ 
       return (
@@ -50,12 +28,8 @@ export function Options({code, resC}){
       )
     }
 
-    console.log('Correct ' + numberCorrect)
-     console.log('Respuestas ' + numberCorrect)
-
-
     return (
-      <div id={codeP} className='option' onClick={(e)=> handleClick(resC,e)}>
+      <div id={codeP} className='option' onClick={(e)=> clickOptions(resC,e)}>
          <p className='option_P'  >{codeP}</p>
 
       </div>
