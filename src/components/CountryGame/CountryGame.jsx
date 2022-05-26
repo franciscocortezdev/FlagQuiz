@@ -10,7 +10,9 @@ export function CountryGame(){
   const [countrys, setCountrys] = useState([]);
   const [load, setLoad] = useState(true);
   const [numQuestion, setnumQuestion] = useState(1)
+  const [selected, setselected] = useState(false)
   const numCorrect = useRef(0)
+  
 
   useEffect(()=>{
     setLoad(true)
@@ -40,6 +42,7 @@ export function CountryGame(){
   const handleBtnNext = () =>{
     setRand(Math.floor(Math.random()*110))
     setnumQuestion(prev => prev + 1)
+    setselected(false)
     
   }
   const handleClick = (resc,e) => {
@@ -49,13 +52,19 @@ export function CountryGame(){
     if(selected.innerText === resc){
       selected.classList.add('correct')
       numCorrect.current += 1
+      setselected(true)
       return
     }
-  
+    setselected(true)
     selected.classList.add('incorrect')
     correct.classList.add('correct')
   }
   console.log(numCorrect)
+
+
+
+
+
   return(
     <>
     <div className='containerHead'>
@@ -81,7 +90,12 @@ export function CountryGame(){
     </div>
     <div className='containerBtn'>
     <p>Question: {numQuestion}/10</p>
-    {numQuestion === 10 ? <a href='/gameEnd' >Resultado</a> : <button className='btnNext' onClick={handleBtnNext} >Next Country</button>}
+
+    {
+      selected && 
+      ( numQuestion === 10 ? <a href='/gameEnd' >Resultado</a> : <button className='btnNext' onClick={handleBtnNext} >Next Country</button>)
+    }
+    
     
 
     </div>
