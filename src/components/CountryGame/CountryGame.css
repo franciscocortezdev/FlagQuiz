@@ -43,22 +43,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  
 }
 
 .question{
   color: var(--words);
   font-size: 40px;
+  
 }
-
-
-
-
-
-
-
-
-
-
 
 .btnNext{
   padding: 2px 10px;

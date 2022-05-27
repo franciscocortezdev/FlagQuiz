@@ -14,7 +14,7 @@ export function EndGame({params}) {
       <img className='endPic' src={endPic} alt='endGame'/>
       <p className='pointTitle'>Puntos Obtenidos</p>
       <p className='point'>{params.points}</p>
-      <a className='btnEnd' href='/gamestart'>Play Again</a>
+      <a className='btnEnd' href='/'>Play Again</a>
     </div>
   )
 
