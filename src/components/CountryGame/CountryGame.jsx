@@ -1,5 +1,5 @@
 import { getAllCountrys } from '../../API/getAllCountrys'
-import {useState, useEffect, useRef} from 'react';
+import {useState, useEffect} from 'react';
 import {Options} from '../Options/Options'
 import './CountryGame.css'
 
@@ -90,11 +90,11 @@ export function CountryGame(){
 
     </div>
     <div className='containerBtn'>
-    <p>Question: {numQuestion}/10</p>
+    <p className='question'>Question: {numQuestion}<span className='questionTotal'>/10</span></p>
 
     {
       selected && 
-      ( numQuestion === 10 ? <a href={`/gameend/${numCorrect}`} ><button className='btnNext'>Result</button></a> : <button className='btnNext' onClick={handleBtnNext} >Next Country</button>)
+      ( numQuestion === 10 ? <a href={`/gameend/${numCorrect}`} ><button className='btnNext'>Game Score</button></a> : <button className='btnNext' onClick={handleBtnNext} >Next Country</button>)
     }
     
     </div>
