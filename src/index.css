@@ -4,3 +4,10 @@
   box-sizing: border-box;
 }
 
+:root{
+  --fondo: #ddf7f8;
+  --container: #9ab8ba;
+  --words: #045256;
+  
+  
+}

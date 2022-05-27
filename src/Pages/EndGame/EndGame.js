@@ -1,14 +1,20 @@
 
 import React from 'react'
+import './EndGame.css'
+import endPic from '../../img/EndGame.png'
+
+
 
 export function EndGame({params}) {
   
   return (
-    <div>
-      <h1>EndGame</h1>
-      <p>Puntos Obtenidos</p>
-      <p>{params.points}</p>
-      <a href='/gamestart'>Play</a>
+    <div className='containerEnd'>
+
+      <h1 className='titleEnd'>EndGame</h1>
+      <img className='endPic' src={endPic} alt='endGame'/>
+      <p className='pointTitle'>Puntos Obtenidos</p>
+      <p className='point'>{params.points}</p>
+      <a className='btnEnd' href='/gamestart'>Play Again</a>
     </div>
   )
 

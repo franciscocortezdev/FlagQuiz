@@ -1,0 +1,77 @@
+
+
+
+.containerEnd{
+  font-family: 'Kanit', sans-serif;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--words);
+}
+
+.titleEnd{
+  font-size: 75px;
+  margin: 10px;
+  line-height: .8;
+  
+}
+
+.pointTitle{
+  font-size: 30px;
+}
+.point{
+  font-size: 100px;
+  line-height: .8;
+  margin-bottom: 10px;
+}
+
+.btnEnd{
+  padding: 10px 40px;
+  font-family: 'Kanit', sans-serif;
+  font-size: 40px;
+  border: 2px solid var(--words);
+  border-radius: 10px;
+
+  color: var(--words);
+  text-decoration: none;
+}
+.btnEnd:hover{
+  transform: scale(1.1);
+  
+}
+.btnEnd:active{
+  transform: scale(1);
+  
+}
+
+.endPic{
+  width: 250px;
+  margin: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
