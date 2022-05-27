@@ -38,6 +38,7 @@
 
   color: var(--words);
   text-decoration: none;
+  margin-bottom: 10px;
 }
 .btnEnd:hover{
   transform: scale(1.1);

@@ -2,7 +2,7 @@
 import React from 'react'
 import './EndGame.css'
 import endPic from '../../img/EndGame.png'
-
+import {Link } from "wouter"
 
 
 export function EndGame({params}) {
@@ -14,7 +14,7 @@ export function EndGame({params}) {
       <img className='endPic' src={endPic} alt='endGame'/>
       <p className='pointTitle'>Puntos Obtenidos</p>
       <p className='point'>{params.points}</p>
-      <a className='btnEnd' href='/'>Play Again</a>
+      <Link className='btnEnd' to='/'>Play Again</Link>
     </div>
   )
 

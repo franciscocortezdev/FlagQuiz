@@ -2,7 +2,7 @@ import { getAllCountrys } from '../../API/getAllCountrys'
 import {useState, useEffect} from 'react';
 import {Options} from '../Options/Options'
 import './CountryGame.css'
-
+import {Link } from "wouter"
 
 
 export function CountryGame(){
@@ -31,7 +31,7 @@ export function CountryGame(){
     return (
       <div className='containerHead'>
         <h1 className='gameTitle'>What country is?</h1>
-        <p className='Loading'>Cargando Picture....</p>
+        <p className='LoadingPic'>Cargando Picture....</p>
       </div>
     )
   }
@@ -60,7 +60,7 @@ export function CountryGame(){
     selected.classList.add('incorrect')
     correct.classList.add('correct')
   }
-  console.log(numCorrect)
+  
 
 
 
@@ -94,7 +94,7 @@ export function CountryGame(){
 
     {
       selected && 
-      ( numQuestion === 10 ? <a href={`/gameend/${numCorrect}`} ><button className='btnNext'>Game Score</button></a> : <button className='btnNext' onClick={handleBtnNext} >Next Country</button>)
+      ( numQuestion === 10 ? <Link to={`/gameend/${numCorrect}`} ><button className='btnNext'>Game Score</button></Link> : <button className='btnNext' onClick={handleBtnNext} >Next Country</button>)
     }
     
     </div>

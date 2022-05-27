@@ -1,6 +1,7 @@
 import React from 'react'
 import './Home.css'
 import startPic from '../../img/StartGame.png'
+import {Link } from "wouter"
 
 export function Home() {
   return (
@@ -12,7 +13,7 @@ export function Home() {
 
 
       <img className='startPic' src={startPic} alt='startQuiz'/>
-      <a className='btnStart' href='/gamestart'>Start Quiz</a>
+      <Link className='btnStart' to='/gamestart'>Start Quiz</Link>
 
     </div>
   )
