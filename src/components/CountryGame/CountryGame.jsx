@@ -11,7 +11,8 @@ export function CountryGame(){
   const [load, setLoad] = useState(true);
   const [numQuestion, setnumQuestion] = useState(1)
   const [selected, setselected] = useState(false)
-  const numCorrect = useRef(0)
+  const [numCorrect,setNumCorrect] = useState(0)
+ 
   
 
   useEffect(()=>{
@@ -51,7 +52,7 @@ export function CountryGame(){
    
     if(selected.innerText === resc){
       selected.classList.add('correct')
-      numCorrect.current += 1
+      setNumCorrect(prev => prev + 1)
       setselected(true)
       return
     }
@@ -93,7 +94,7 @@ export function CountryGame(){
 
     {
       selected && 
-      ( numQuestion === 10 ? <a href={` /gameend/${numCorrect.current}`} ><button className='btnNext'>Result</button></a> : <button className='btnNext' onClick={handleBtnNext} >Next Country</button>)
+      ( numQuestion === 10 ? <a href={`/gameend/${numCorrect}`} ><button className='btnNext'>Result</button></a> : <button className='btnNext' onClick={handleBtnNext} >Next Country</button>)
     }
     
     </div>
