@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react';
 import {Options} from '../Options/Options'
 import './CountryGame.css'
 import {Link } from "wouter"
-
+import { LoadPicture } from '../Loaders/LoadPicture';
 
 export function CountryGame(){
   const [rand, setRand] = useState(Math.floor(Math.random()*110));
@@ -31,7 +31,7 @@ export function CountryGame(){
     return (
       <div className='containerHead'>
         <h1 className='gameTitle'>What country is?</h1>
-        <p className='LoadingPic'>Cargando Picture....</p>
+        <LoadPicture/>
       </div>
     )
   }
