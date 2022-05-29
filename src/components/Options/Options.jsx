@@ -1,7 +1,7 @@
 import { getCodeCountrys } from '../../API/getCodeCountrys'
 import {useState, useEffect} from 'react';
 import './Options.css'
-
+import { LoadOption } from '../Loaders/LoadOption';
 
 
 
@@ -23,7 +23,7 @@ export function Options({code, resC,clickOptions}){
   
     if(codeP === undefined){ 
       return (
-        <p className='Loading'>Cargando opcion ....</p>
+        <LoadOption/>
       )
     }
 

@@ -6,6 +6,7 @@ export function LoadPicture() {
 
   return (
     <ContentLoader
+    
     width={560}
     height={240}
     viewBox="0 0 560 240"
