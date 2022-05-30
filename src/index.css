@@ -1,13 +1,11 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root{
+:root {
   --fondo: #ddf7f8;
   --container: #9ab8ba;
   --words: #045256;
-  
-  
 }

@@ -1,54 +1,36 @@
-
-
-.option{
- margin-bottom: 10px;
- border-radius: 10px;
- width: 100%;
+.option {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  width: 100%;
 }
-.option_P{
-  font-family: 'Kanit', sans-serif;
+.option_P {
+  font-family: "Kanit", sans-serif;
   font-size: 24px;
   margin: 0;
   padding: 6px 0;
   border-radius: 10px;
-  border: 4px solid var(--words) ;
+  border: 4px solid var(--words);
   color: var(--words);
   text-align: center;
 }
-.option_P:hover{
+.option_P:hover {
   box-shadow: 0 0 10px var(--words);
 }
 
-
-
-
-.Loading{
-  font-family: 'Kanit', sans-serif;
+.Loading {
+  font-family: "Kanit", sans-serif;
   font-size: 20px;
-  
 }
 
-
-.incorrect{
+.incorrect {
   background-color: rgba(255, 0, 0, 0.6);
   color: var(--words);
-  
+
   font-weight: bold;
 }
 
-.correct{
+.correct {
   background-color: rgba(0, 128, 0, 0.6);
   color: var(--words);
   font-weight: bold;
-  
 }
-
-
-
-
-
-
-
-
-
-

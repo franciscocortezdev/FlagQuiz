@@ -1,22 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;500;700&display=swap");
 
-
-
-.container{
-  
+.container {
   width: 100%;
-  height:100vh;
+  height: 100vh;
   background-color: var(--words);
   display: flex;
   justify-content: center;
   align-items: center;
-  
- 
 }
 
-.containerGame{
-  font-family: 'Kanit', sans-serif;
-  background: var(--container); 
+.containerGame {
+  font-family: "Kanit", sans-serif;
+  background: var(--container);
   border-radius: 20px;
   width: 600px;
   min-width: 300px;
@@ -28,4 +23,3 @@
   box-shadow: 0 0 10px #000;
   margin: 20px;
 }
-
