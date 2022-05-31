@@ -9,7 +9,7 @@ export function LoadPicture() {
     <ContentLoader
       width={'100%'}
       height={240}
-      viewBox="0 0 100% 240"
+      
       backgroundColor="#045256"
       foregroundColor="#9ab8ba"
     >

@@ -6,7 +6,7 @@ export function LoadOption() {
     <ContentLoader
       width={'100%'}
       height={92}
-      viewBox="0 0 100% 92"
+ 
       backgroundColor="#045256"
       foregroundColor="#9ab8ba"
     >
