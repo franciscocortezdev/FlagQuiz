@@ -28,7 +28,7 @@ export function CountryGame() {
 
   if (load) {
     return (
-      <div className="containerHead">
+      <div className="containerLoadPic">
         <h1 className="gameTitle">What country is?</h1>
         <LoadPicture />
       </div>
@@ -45,7 +45,7 @@ export function CountryGame() {
     setselected(false);
   };
   const handleClick = (resc, e) => {
-    let selected = e.target;
+    let selected = e.currentTarget;
     let correct = document.getElementById(resc);
 
     if (selected.innerText === resc) {

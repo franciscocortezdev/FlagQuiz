@@ -1,6 +1,5 @@
 .containerHome {
   font-family: "Kanit", sans-serif;
-  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -9,23 +8,26 @@
   color: var(--words);
 }
 .title {
-  font-size: 40px;
+  font-size: 30px;
   line-height: 1;
+  margin-bottom: 20px;
 }
 .titleTo {
-  font-size: 40px;
+  font-size: 30px;
   line-height: 0.8;
+  margin-bottom: 20px;
 }
 .titleGame {
-  margin: 10px;
-  font-size: 80px;
+  
+  font-size: 60px;
   font-weight: bold;
   line-height: 0.8;
+  margin-bottom: 40px;
 }
 
 .startPic {
-  width: 50%;
-  margin: 20px;
+  width: 80%;
+  margin-bottom: 20px;
 }
 
 .btnStart {

@@ -27,7 +27,7 @@
 }
 
 .btnEnd {
-  padding: 10px 40px;
+  padding: 5px 10px;
   font-family: "Kanit", sans-serif;
   font-size: 40px;
   border: 4px solid var(--words);
@@ -36,6 +36,7 @@
   color: var(--words);
   text-decoration: none;
   margin-bottom: 10px;
+  text-align: center;
 }
 .btnEnd:hover {
   transform: scale(1.1);

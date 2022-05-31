@@ -1,31 +1,26 @@
 .option {
-  margin-bottom: 10px;
   border-radius: 10px;
   width: 100%;
+  height: 92px;
+  border: 4px solid var(--words);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4px;
 }
 .option_P {
   font-family: "Kanit", sans-serif;
   font-size: 24px;
-  margin: 0;
-  padding: 6px 0;
-  border-radius: 10px;
-  border: 4px solid var(--words);
   color: var(--words);
   text-align: center;
 }
-.option_P:hover {
+.option:hover {
   box-shadow: 0 0 10px var(--words);
-}
-
-.Loading {
-  font-family: "Kanit", sans-serif;
-  font-size: 20px;
 }
 
 .incorrect {
   background-color: rgba(255, 0, 0, 0.6);
   color: var(--words);
-
   font-weight: bold;
 }
 

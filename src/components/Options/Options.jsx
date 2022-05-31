@@ -17,10 +17,8 @@ export function Options({ code, resC, clickOptions }) {
   }
 
   return (
-    <div className="option" onClick={(e) => clickOptions(resC, e)}>
-      <p id={codeP} className="option_P">
-        {codeP}
-      </p>
+    <div id={codeP} className="option" onClick={(e) => clickOptions(resC, e)}>
+      <p className="option_P">{codeP}</p>
     </div>
   );
 }
