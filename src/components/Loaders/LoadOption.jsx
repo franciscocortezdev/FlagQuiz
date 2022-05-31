@@ -4,13 +4,13 @@ import ContentLoader from "react-content-loader";
 export function LoadOption() {
   return (
     <ContentLoader
-      width={260}
+      width={'100%'}
       height={92}
-      viewBox="0 0 260 92"
+      viewBox="0 0 100% 92"
       backgroundColor="#045256"
       foregroundColor="#9ab8ba"
     >
-      <rect x="0" y="0" rx="10" ry="10" width="260" height="92" />
+      <rect x="0" y="0" rx="10" ry="10" width="100%" height="92" />
     </ContentLoader>
   );
 }

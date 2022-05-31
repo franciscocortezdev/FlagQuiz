@@ -14,7 +14,7 @@
   background: var(--container);
   border-radius: 20px;
   
-  min-width: 300px;
+  width: 100%;
   min-height: 700px;
   display: flex;
   flex-direction: column;
@@ -24,3 +24,7 @@
   box-shadow: 0 0 10px #000;
   margin: 10px;
 }
+
+
+
+
