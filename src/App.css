@@ -13,9 +13,9 @@
   font-family: "Kanit", sans-serif;
   background: var(--container);
   border-radius: 20px;
-  
+  max-width: 1024px;
   width: 100%;
-  min-height: 700px;
+  height: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;

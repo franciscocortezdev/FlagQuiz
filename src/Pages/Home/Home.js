@@ -9,11 +9,12 @@ export function Home() {
       <p className="title">Wellcome</p>
       <p className="titleTo">To</p>
       <p className="titleGame">FlagQuiz</p>
-
+      <div className="containerBodyHome">
       <img className="startPic" src={startPic} alt="startQuiz" />
       <Link className="btnStart" to="/game/start">
         Start Quiz
       </Link>
+      </div>
     </div>
   );
 }
