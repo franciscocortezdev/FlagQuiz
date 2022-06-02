@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/FlagQuiz/static/css/main.1585adf3.css",
+    "main.css": "/FlagQuiz/static/css/main.566c60ee.css",
     "main.js": "/FlagQuiz/static/js/main.8aa9da50.js",
     "static/media/StartGame.png": "/FlagQuiz/static/media/StartGame.b4d3f5555a60575ed490.png",
     "static/media/EndGame.png": "/FlagQuiz/static/media/EndGame.571de64ef13c1eee7a0a.png",
     "static/media/Code404.png": "/FlagQuiz/static/media/Code404.767722b9a523dcda224e.png",
     "index.html": "/FlagQuiz/index.html",
-    "main.1585adf3.css.map": "/FlagQuiz/static/css/main.1585adf3.css.map",
+    "main.566c60ee.css.map": "/FlagQuiz/static/css/main.566c60ee.css.map",
     "main.8aa9da50.js.map": "/FlagQuiz/static/js/main.8aa9da50.js.map"
   },
   "entrypoints": [
-    "static/css/main.1585adf3.css",
+    "static/css/main.566c60ee.css",
     "static/js/main.8aa9da50.js"
   ]
 }
