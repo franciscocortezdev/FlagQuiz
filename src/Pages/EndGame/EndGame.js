@@ -12,7 +12,7 @@ export function EndGame({ params }) {
       </div>
       <p className="pointTitle">Correct Answers</p>
       <p className="point">{params.points}</p>
-      <Link className="btnEnd" to="/">
+      <Link className="btnEnd" to="/FlagQuiz/">
         Play Again
       </Link>
     </div>

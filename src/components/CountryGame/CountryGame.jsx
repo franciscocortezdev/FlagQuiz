@@ -88,7 +88,7 @@ export function CountryGame() {
 
         {selected &&
           (numQuestion === 10 ? (
-            <Link to={`/game/end/${numCorrect}`}>
+            <Link to={`/FlagQuiz/game/end/${numCorrect}`}>
               <button className="btnNext">Game Score</button>
             </Link>
           ) : (

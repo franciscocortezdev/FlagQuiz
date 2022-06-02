@@ -11,7 +11,7 @@ export function Home() {
       <p className="titleGame">FlagQuiz</p>
       <div className="containerBodyHome">
       <img className="startPic" src={startPic} alt="startQuiz" />
-      <Link className="btnStart" to="/game/start">
+      <Link className="btnStart" to="/FlagQuiz/game/start">
         Start Quiz
       </Link>
       </div>

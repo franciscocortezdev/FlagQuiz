@@ -11,7 +11,7 @@ export function Page404() {
       <div className='container404Msg'>
       <h1 className='Title404'>PAGE NOT FOUND</h1>
       <p className='Msg404'>The page you are looking is not available</p>
-      <Link className="btnEnd" to="/">
+      <Link className="btnEnd" to="/FlagQuiz/">
         Back to Home
       </Link>
       </div>
