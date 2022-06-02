@@ -10,10 +10,10 @@ export function App() {
     <div className="container">
       <div className="containerGame">
         <Switch>
-        <Route component={Home} path="/FlagQuiz/" />
+        <Route component={Home} path="/FlagQuiz" />
         <Route component={CountryGame} path="/FlagQuiz/game/start" />
         <Route component={EndGame} path="/FlagQuiz/game/end/:points" />
-        <Route component={Page404} path="/FlagQuiz/:rest*" />
+        <Route component={Page404} path="/:rest*" />
         </Switch>
       </div>
     </div>
